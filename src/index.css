@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light grey palette */
+    --background: 0 0% 98%;          /* #fafafa — near-white page background */
+    --foreground: 0 0% 12%;          /* #1f1f1f — primary text */
+    --card: 0 0% 100%;               /* #ffffff — card surface */
+    --card-foreground: 0 0% 12%;
+    --primary: 0 0% 35%;             /* #595959 — buttons, interactive */
+    --primary-foreground: 0 0% 99%;
+    --secondary: 0 0% 94%;           /* #f0f0f0 — secondary buttons */
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 52%;    /* #858585 */
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 20%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 99%;
+    --border: 0 0% 91%;              /* #e8e8e8 */
+    --input: 0 0% 91%;
+    --ring: 0 0% 35%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 0 0% 11%;          /* #1c1c1c */
+    --foreground: 0 0% 92%;          /* #ebebeb */
+    --card: 0 0% 17%;                /* #2b2b2b */
+    --card-foreground: 0 0% 92%;
+    --primary: 0 0% 84%;             /* #d6d6d6 */
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 22%;           /* #383838 */
+    --secondary-foreground: 0 0% 88%;
+    --muted: 0 0% 22%;
+    --muted-foreground: 0 0% 58%;    /* #949494 */
+    --accent: 0 0% 22%;
+    --accent-foreground: 0 0% 88%;
+    --destructive: 0 62% 38%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 24%;              /* #3d3d3d */
+    --input: 0 0% 24%;
+    --ring: 0 0% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border box-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  /* Prevent iOS Safari from zooming on focused inputs */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Safe area CSS variables */
+:root {
+  --sat: env(safe-area-inset-top);
+  --sar: env(safe-area-inset-right);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+}
