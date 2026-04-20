@@ -4,9 +4,13 @@ Personal health progress tracker — weight, water, exercise, and mood. A PWA th
 
 ## Preview
 
-| Desktop | Mobile |
-|---|---|
-| ![Desktop](screenshots/desktop.png) | ![Mobile](screenshots/mobile.png) |
+<p align="center">
+  <img src="screenshots/desktop.png" alt="Desktop" width="100%" style="border-radius:12px" />
+</p>
+
+<p align="center">
+  <img src="screenshots/mobile.png" alt="Mobile" width="360" style="border-radius:12px" />
+</p>
 
 ## Features
 
