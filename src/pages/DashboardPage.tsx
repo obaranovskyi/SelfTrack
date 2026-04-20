@@ -18,8 +18,8 @@ export function DashboardPage({ startDate }: DashboardPageProps) {
 
   return (
     <div className="min-h-svh flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
-      <header className="px-5 pt-8 pb-4">
-        <div className="max-w-lg mx-auto w-full flex items-center justify-between">
+      <header className="pt-8 pb-4">
+        <div className="max-w-lg mx-auto w-full px-5 flex items-center justify-between">
         <h1 className="text-4xl font-black tracking-tight">
           <span className="text-foreground">Self</span>
           <span className="text-primary">Track</span>
