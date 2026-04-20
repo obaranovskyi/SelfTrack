@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { getTodayISO } from "../services/storage";
 import { ProgressHeader } from "../features/progress/components/ProgressHeader";
 import { WeightTracker } from "../features/weight/components/WeightTracker";
 import { ExerciseTracker } from "../features/exercise/components/ExerciseTracker";
@@ -13,13 +12,14 @@ interface DashboardPageProps {
 
 export function DashboardPage({ startDate }: DashboardPageProps) {
   const [showReset, setShowReset] = useState(false);
-  const today = getTodayISO();
 
   return (
     <div className="min-h-svh flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
       <header className="px-5 pt-8 pb-4">
-        <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">{today}</p>
-        <h1 className="text-3xl font-bold text-foreground">SelfTrack</h1>
+        <h1 className="text-4xl font-black tracking-tight">
+          <span className="text-foreground">Self</span>
+          <span className="text-primary">Track</span>
+        </h1>
       </header>
 
       <main className="flex-1 px-4 pb-8 flex flex-col gap-3 max-w-lg mx-auto w-full">
