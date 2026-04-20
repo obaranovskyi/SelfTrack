@@ -67,6 +67,8 @@ The app deploys automatically to GitHub Pages on every push to `main` via GitHub
 
 Deployed URL: `https://<username>.github.io/SelfTrack/`
 
+> First time? See the step-by-step setup guide: [`conventions/tech/16_github-pages-first-deploy.tech.md`](conventions/tech/16_github-pages-first-deploy.tech.md)
+
 ---
 
 ## Icons
