@@ -4,45 +4,47 @@
 
 @layer base {
   :root {
-    /* Light grey palette */
-    --background: 0 0% 98%;          /* #fafafa — near-white page background */
-    --foreground: 0 0% 12%;          /* #1f1f1f — primary text */
-    --card: 0 0% 100%;               /* #ffffff — card surface */
-    --card-foreground: 0 0% 12%;
-    --primary: 0 0% 35%;             /* #595959 — buttons, interactive */
-    --primary-foreground: 0 0% 99%;
-    --secondary: 0 0% 94%;           /* #f0f0f0 — secondary buttons */
-    --secondary-foreground: 0 0% 20%;
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 52%;    /* #858585 */
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 20%;
+    /* Light theme */
+    --background: 220 20% 97%;
+    --foreground: 230 25% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 10%;
+    --primary: 173 78% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 230 20% 25%;
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 12% 48%;
+    --accent: 258 80% 62%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 99%;
-    --border: 0 0% 91%;              /* #e8e8e8 */
-    --input: 0 0% 91%;
-    --ring: 0 0% 35%;
-    --radius: 0.75rem;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 173 78% 38%;
+    --radius: 1rem;
   }
 
   .dark {
-    --background: 0 0% 11%;          /* #1c1c1c */
-    --foreground: 0 0% 92%;          /* #ebebeb */
-    --card: 0 0% 17%;                /* #2b2b2b */
-    --card-foreground: 0 0% 92%;
-    --primary: 0 0% 84%;             /* #d6d6d6 */
-    --primary-foreground: 0 0% 10%;
-    --secondary: 0 0% 22%;           /* #383838 */
-    --secondary-foreground: 0 0% 88%;
-    --muted: 0 0% 22%;
-    --muted-foreground: 0 0% 58%;    /* #949494 */
-    --accent: 0 0% 22%;
-    --accent-foreground: 0 0% 88%;
-    --destructive: 0 62% 38%;
+    /* Dark navy/purple theme */
+    --background: 232 28% 7%;
+    --foreground: 220 30% 93%;
+    --card: 232 24% 12%;
+    --card-foreground: 220 30% 93%;
+    --primary: 173 78% 55%;
+    --primary-foreground: 232 28% 7%;
+    --secondary: 232 20% 18%;
+    --secondary-foreground: 220 20% 75%;
+    --muted: 232 20% 18%;
+    --muted-foreground: 220 15% 50%;
+    --accent: 258 80% 68%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 68% 55%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 24%;              /* #3d3d3d */
-    --input: 0 0% 24%;
-    --ring: 0 0% 84%;
+    --border: 232 22% 20%;
+    --input: 232 22% 20%;
+    --ring: 173 78% 55%;
+    --radius: 1rem;
   }
 }
 
@@ -54,7 +56,6 @@
     @apply bg-background text-foreground;
     font-family: system-ui, -apple-system, sans-serif;
   }
-  /* Prevent iOS Safari from zooming on focused inputs */
   input,
   select,
   textarea {
@@ -62,7 +63,6 @@
   }
 }
 
-/* Safe area CSS variables */
 :root {
   --sat: env(safe-area-inset-top);
   --sar: env(safe-area-inset-right);

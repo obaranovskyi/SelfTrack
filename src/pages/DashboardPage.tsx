@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getTodayISO } from "../services/storage";
 import { ProgressHeader } from "../features/progress/components/ProgressHeader";
 import { WeightTracker } from "../features/weight/components/WeightTracker";
 import { ExerciseTracker } from "../features/exercise/components/ExerciseTracker";
@@ -12,26 +13,24 @@ interface DashboardPageProps {
 
 export function DashboardPage({ startDate }: DashboardPageProps) {
   const [showReset, setShowReset] = useState(false);
+  const today = getTodayISO();
 
   return (
     <div className="min-h-svh flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
-      <header className="px-4 pt-6 pb-4">
-        <h1 className="text-2xl font-bold text-foreground">SelfTrack</h1>
+      <header className="px-5 pt-8 pb-4">
+        <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">{today}</p>
+        <h1 className="text-3xl font-bold text-foreground">SelfTrack</h1>
       </header>
 
-      <main className="flex-1 px-4 pb-8 flex flex-col gap-4 max-w-lg mx-auto w-full">
-        {/* Progress Header */}
-        <div className="bg-card rounded-2xl p-5 shadow-sm border border-border">
-          <ProgressHeader startDate={startDate} />
-        </div>
-
-        {/* Trackers */}
+      <main className="flex-1 px-4 pb-8 flex flex-col gap-3 max-w-lg mx-auto w-full">
+        <ProgressHeader startDate={startDate} />
         <WeightTracker />
-        <ExerciseTracker startDate={startDate} />
-        <WaterTracker startDate={startDate} />
+        <div className="grid grid-cols-2 gap-3">
+          <ExerciseTracker startDate={startDate} />
+          <WaterTracker startDate={startDate} />
+        </div>
         <MoodTracker />
 
-        {/* Reset */}
         <div className="pt-4 flex justify-center">
           <button
             onClick={() => setShowReset(true)}

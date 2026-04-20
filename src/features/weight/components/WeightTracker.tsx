@@ -9,54 +9,65 @@ export function WeightTracker() {
   const lostWeight = Math.round((startWeight - currentWeight) * 10) / 10;
 
   function handleDecrement() {
-    const next = adjustWeight(-0.1);
-    setCurrentWeight(next);
+    setCurrentWeight(adjustWeight(-0.1));
   }
 
   function handleIncrement() {
-    const next = adjustWeight(0.1);
-    setCurrentWeight(next);
+    setCurrentWeight(adjustWeight(0.1));
   }
 
   return (
-    <div className="bg-card rounded-2xl p-5 flex flex-col gap-4 shadow-sm border border-border">
-      <h2 className="text-base font-semibold text-foreground">⚖️ Weight</h2>
+    <div className="bg-card border border-border rounded-2xl p-5 flex flex-col gap-5">
+      <div className="flex items-center gap-2">
+        <span className="text-lg">⚖️</span>
+        <span className="text-sm font-medium text-muted-foreground">Weight</span>
+      </div>
 
-      <div className="grid grid-cols-2 gap-3">
-        <div className="flex flex-col gap-0.5">
-          <span className="text-xs text-muted-foreground">Start Weight</span>
-          <span className="text-lg font-bold text-foreground">{startWeight.toFixed(1)} kg</span>
+      <div className="flex items-baseline gap-2">
+        <span className="text-5xl font-bold text-foreground tabular-nums">
+          {currentWeight.toFixed(1)}
+        </span>
+        <span className="text-xl text-muted-foreground">kg</span>
+      </div>
+
+      <div className="flex items-center gap-5">
+        <div>
+          <p className="text-xs text-muted-foreground mb-0.5">Start</p>
+          <p className="text-sm font-semibold text-foreground">{startWeight.toFixed(1)} kg</p>
         </div>
-        <div className="flex flex-col gap-0.5">
-          <span className="text-xs text-muted-foreground">Lost Weight</span>
-          <span
+        <div className="w-px h-8 bg-border" />
+        <div>
+          <p className="text-xs text-muted-foreground mb-0.5">Lost</p>
+          <p
             className={cn(
-              "text-lg font-bold",
-              lostWeight > 0 ? "text-green-600 dark:text-green-400" : "text-foreground"
+              "text-sm font-semibold",
+              lostWeight > 0
+                ? "text-primary"
+                : lostWeight < 0
+                  ? "text-destructive"
+                  : "text-foreground"
             )}
           >
             {lostWeight > 0 ? "−" : lostWeight < 0 ? "+" : ""}
             {Math.abs(lostWeight).toFixed(1)} kg
-          </span>
+          </p>
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-center gap-3">
         <button
           onClick={handleDecrement}
           disabled={currentWeight <= 0.1}
           aria-label="Decrease weight"
-          className="min-h-12 min-w-12 rounded-full bg-secondary text-secondary-foreground text-xl font-bold flex items-center justify-center touch-manipulation disabled:opacity-40 disabled:cursor-not-allowed transition-opacity"
+          className="min-h-12 min-w-12 rounded-full bg-secondary text-secondary-foreground text-2xl font-light flex items-center justify-center touch-manipulation disabled:opacity-30 transition-opacity"
         >
           −
         </button>
-        <span className="text-2xl font-bold text-foreground tabular-nums">
-          {currentWeight.toFixed(1)} kg
-        </span>
+        <div className="flex-1" />
         <button
           onClick={handleIncrement}
           aria-label="Increase weight"
-          className="min-h-12 min-w-12 rounded-full bg-secondary text-secondary-foreground text-xl font-bold flex items-center justify-center touch-manipulation transition-opacity"
+          className="min-h-12 min-w-12 rounded-full bg-primary text-primary-foreground text-2xl font-light flex items-center justify-center touch-manipulation transition-opacity"
         >
           +
         </button>

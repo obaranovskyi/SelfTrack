@@ -14,7 +14,7 @@ const ThemeContext = createContext<ThemeContextValue>({
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) ?? "system"
+    () => (localStorage.getItem("theme") as Theme) ?? "dark"
   );
 
   useEffect(() => {
@@ -27,9 +27,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach((el) => {
       const media = el.getAttribute("media") ?? "";
       if (media.includes("dark")) {
-        el.setAttribute("content", isDark ? "#1c1c1c" : "#fafafa");
+        el.setAttribute("content", isDark ? "#0c0f1a" : "#f5f7ff");
       } else {
-        el.setAttribute("content", isDark ? "#fafafa" : "#1c1c1c");
+        el.setAttribute("content", isDark ? "#f5f7ff" : "#0c0f1a");
       }
     });
   }, [theme]);
