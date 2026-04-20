@@ -7,7 +7,9 @@ Everything runs in the browser with no account, no server, and no data leaving y
 ## Preview
 
 <p align="center">
-  <img src="screenshots/mobile.png" alt="Mobile" width="360" style="border-radius:12px" />
+  <img src="screenshots/mobile.png" alt="Dark mode" width="340" style="border-radius:12px; margin-right:16px" />
+  &nbsp;&nbsp;
+  <img src="screenshots/mobile-light.png" alt="Light mode" width="340" style="border-radius:12px" />
 </p>
 
 ## Features
