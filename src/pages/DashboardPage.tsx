@@ -26,7 +26,7 @@ export function DashboardPage({ startDate }: DashboardPageProps) {
         <button
           onClick={() => setTheme(isDark ? "light" : "dark")}
           aria-label="Toggle theme"
-          className="min-h-11 min-w-11 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center text-xl touch-manipulation transition-colors"
+          className="h-8 w-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center text-sm touch-manipulation transition-colors"
         >
           {isDark ? "☀️" : "🌙"}
         </button>
