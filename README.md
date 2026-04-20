@@ -7,10 +7,6 @@ Everything runs in the browser with no account, no server, and no data leaving y
 ## Preview
 
 <p align="center">
-  <img src="screenshots/desktop.png" alt="Desktop" width="100%" style="border-radius:12px" />
-</p>
-
-<p align="center">
   <img src="screenshots/mobile.png" alt="Mobile" width="360" style="border-radius:12px" />
 </p>
 
