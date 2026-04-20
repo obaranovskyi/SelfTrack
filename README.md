@@ -65,7 +65,7 @@ The app deploys automatically to GitHub Pages on every push to `main` via GitHub
 1. In repository **Settings → Pages**, set source to **GitHub Actions**.
 2. Push to `main` — the workflow builds and deploys.
 
-Deployed URL: `https://<username>.github.io/SelfTrack/`
+Deployed URL: `https://obaranovskyi.github.io/SelfTrack/`
 
 > First time? See the step-by-step setup guide: [`conventions/tech/16_github-pages-first-deploy.tech.md`](conventions/tech/16_github-pages-first-deploy.tech.md)
 
