@@ -18,18 +18,20 @@ export function DashboardPage({ startDate }: DashboardPageProps) {
 
   return (
     <div className="min-h-svh flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
-      <header className="px-5 pt-8 pb-4 flex items-center justify-between">
+      <header className="px-5 pt-8 pb-4">
+        <div className="max-w-lg mx-auto w-full flex items-center justify-between">
         <h1 className="text-4xl font-black tracking-tight">
           <span className="text-foreground">Self</span>
           <span className="text-primary">Track</span>
         </h1>
-        <button
+          <button
           onClick={() => setTheme(isDark ? "light" : "dark")}
           aria-label="Toggle theme"
           className="h-8 w-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center text-sm touch-manipulation transition-colors"
         >
           {isDark ? "☀️" : "🌙"}
-        </button>
+          </button>
+        </div>
       </header>
 
       <main className="flex-1 px-4 pb-8 flex flex-col gap-3 max-w-lg mx-auto w-full">
