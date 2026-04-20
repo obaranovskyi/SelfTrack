@@ -2,6 +2,12 @@
 
 Personal health progress tracker — weight, water, exercise, and mood. A PWA that runs entirely in the browser with no backend or account required.
 
+## Preview
+
+| Desktop | Mobile |
+|---|---|
+| ![Desktop](screenshots/desktop.png) | ![Mobile](screenshots/mobile.png) |
+
 ## Features
 
 - **Weight tracker** — start weight vs current weight, delta in 0.1 kg steps
