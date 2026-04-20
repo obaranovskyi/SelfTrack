@@ -132,7 +132,7 @@ export function setMood(mood: number): void {
   const today = getTodayISO();
   const log = getMoodLog();
   log[today] = mood;
-  const pruned = pruneLog(log, 90);
+  const pruned = pruneLog(log, 165);
   localStorage.setItem(STORAGE_KEYS.moodLog, JSON.stringify(pruned));
 }
 
