@@ -1,6 +1,8 @@
 # SelfTrack
 
-Personal health progress tracker — weight, water, exercise, and mood. A PWA that runs entirely in the browser with no backend or account required.
+SelfTrack is a personal health progress tracker you install on your phone like a native app. Open it daily, log your weight, water intake, exercise minutes, and mood — and it keeps a running average so you can see how you're trending over time.
+
+Everything runs in the browser with no account, no server, and no data leaving your device. All entries are stored locally and available offline.
 
 ## Preview
 
